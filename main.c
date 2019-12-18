@@ -1,7 +1,6 @@
-#include "headers/ds_static.h"
+#include "headers/ds_general.h"
 
 int main() {
     printf("Hello, World!\n");
-    test();
     return 0;
 }
