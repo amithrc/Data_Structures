@@ -20,8 +20,10 @@
 
 #define DEALLOC_2D(ptr,row) \
                 for(int i=0;i<row;i++) \
-                    DEALLOC(*(ptr+i))
-
+                { \
+                    VERIFY(*(ptr+i)) \
+                    DEALLOC(*(ptr+i)) \
+                }
 
 
 #define ALLOC(ptr,type,size) \
