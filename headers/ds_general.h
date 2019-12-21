@@ -18,11 +18,24 @@
 #define DEALLOC(ptr) if(ptr != NULL); \
                       free(ptr);
 
+#define DEALLOC_2D(ptr,row) \
+                for(int i=0;i<row;i++) \
+                    DEALLOC(*(ptr+i))
+
+
+
 #define ALLOC(ptr,type,size) \
                       ptr = (type *) malloc(size * sizeof(type)); \
                       if (!ptr) \
                       { \
                         ERROR("Error Allocating memory!!"); \
                       }
+#define VERIFY(ptr) \
+               if( ptr == NULL) \
+                 exit(-1);
+
+#define ARRAY_SIZE(_arr) sizeof(_arr)/sizeof(_arr[0]);
+
+
 
 #endif //DATA_STRUCTURES_DS_GENERAL_H
