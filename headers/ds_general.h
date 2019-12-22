@@ -15,7 +15,7 @@
                 exit(-1);
 
 
-#define DEALLOC(ptr) if(ptr != NULL); \
+#define DEALLOC(ptr) if(ptr != NULL) \
                       free(ptr);
 
 #define DEALLOC_2D(ptr,row) \
@@ -23,21 +23,36 @@
                 { \
                     VERIFY(*(ptr+i)) \
                     DEALLOC(*(ptr+i)) \
-                }
+                } \
+                free(ptr)
 
 
 #define ALLOC(ptr,type,size) \
-                      ptr = (type *) malloc(size * sizeof(type)); \
-                      if (!ptr) \
+                      ptr = (type *) malloc (size * sizeof(type)); \
+                      INVALID_POINTER(ptr)  \
                       { \
                         ERROR("Error Allocating memory!!"); \
                       }
+
+#define CALLOC(ptr,type,size) \
+                      ptr = (type *) calloc (size, sizeof(type)); \
+                      INVALID_POINTER(ptr)  \
+                      { \
+                        ERROR("Error Allocating memory!!"); \
+                      }
+
+
 #define VERIFY(ptr) \
                if( ptr == NULL) \
                  exit(-1);
 
 #define ARRAY_SIZE(_arr) sizeof(_arr)/sizeof(_arr[0]);
 
+#define VALID_POINTER(ptr) \
+                      if(ptr != NULL) \
+
+#define INVALID_POINTER(ptr) \
+                      if(ptr == NULL) \
 
 
 #endif //DATA_STRUCTURES_DS_GENERAL_H
