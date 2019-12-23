@@ -7,8 +7,12 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#include "ds_array.h"
 
+typedef enum
+{
+    FALSE,
+    TRUE
+} BOOLEAN;
 
 #define ERROR(msg) \
                 printf("%s",msg); \
@@ -46,7 +50,7 @@
                if( ptr == NULL) \
                  exit(-1);
 
-#define ARRAY_SIZE(_arr) sizeof(_arr)/sizeof(_arr[0]);
+#define ARRAY_SIZE(_arr) sizeof(_arr)/sizeof(_arr[0])
 
 #define VALID_POINTER(ptr) \
                       if(ptr != NULL) \
