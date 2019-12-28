@@ -13,9 +13,9 @@ int main() {
     }
 
     ARRAY_1D res = {10,create1D(10)};
-
     add_array(a1,a2,&res);
-
+    display_1d_array(&res,FALSE);
+    sub_array(a1,a2,&res);
     display_1d_array(&res,FALSE);
     DEALLOC(res._arr);
     return 0;

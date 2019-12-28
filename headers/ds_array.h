@@ -14,7 +14,6 @@
                             ERROR("Array size are not equal, Cannot add the arrays!"); \
                         }\
 
-
 typedef struct arr_1d
 {
     int size;
@@ -38,4 +37,5 @@ ARRAY_2D* dynamic_2D(int row,int col);
 void dealloc_1d(ARRAY_1D* ptr);
 void dealloc_2d(ARRAY_2D* ptr);
 void add_array(ARRAY_1D *a1,ARRAY_1D *a2,ARRAY_1D* res);
+void sub_array(ARRAY_1D *a1,ARRAY_1D *a2,ARRAY_1D* res);
 #endif //DATA_STRUCTURES_DS_ARRAY_H
