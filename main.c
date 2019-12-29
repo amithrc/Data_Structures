@@ -17,6 +17,10 @@ int main() {
     display_1d_array(&res,FALSE);
     sub_array(a1,a2,&res);
     display_1d_array(&res,FALSE);
+    mul_array(a1,a2,&res);
+    display_1d_array(&res,FALSE);
     DEALLOC(res._arr);
+    dealloc_1d(a1);
+    dealloc_1d(a2);
     return 0;
 }

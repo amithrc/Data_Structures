@@ -28,8 +28,8 @@ typedef struct arr_2d
 }ARRAY_2D;
 
 
- int* create1D(int size);
- int** create2D(int row,int col);
+int* create1D(int size);
+int** create2D(int row,int col);
 void display_1d_array(ARRAY_1D *arr,BOOLEAN tidy_print);
 void display_2d_array(ARRAY_2D* arr,BOOLEAN tidy_print);
 ARRAY_1D* dynamic_1D(int size);
@@ -38,4 +38,6 @@ void dealloc_1d(ARRAY_1D* ptr);
 void dealloc_2d(ARRAY_2D* ptr);
 void add_array(ARRAY_1D *a1,ARRAY_1D *a2,ARRAY_1D* res);
 void sub_array(ARRAY_1D *a1,ARRAY_1D *a2,ARRAY_1D* res);
+void mul_array(ARRAY_1D *a1,ARRAY_1D *a2,ARRAY_1D* res);
+
 #endif //DATA_STRUCTURES_DS_ARRAY_H

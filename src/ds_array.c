@@ -130,3 +130,14 @@ void sub_array(ARRAY_1D *a1,ARRAY_1D *a2,ARRAY_1D* res)
         res->_arr[i] = a1->_arr[i] - a2->_arr[i];
     }
 }
+
+void mul_array(ARRAY_1D *a1,ARRAY_1D *a2,ARRAY_1D* res)
+{
+    VERIFY_1D_SIZE(a1,a2);
+    int size = a1->size;
+
+    for(int i=0;i< size;i++)
+    {
+        res->_arr[i] = a1->_arr[i] * a2->_arr[i];
+    }
+}
