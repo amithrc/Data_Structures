@@ -27,6 +27,7 @@ typedef struct arr_2d
     int **_matrix;
 }ARRAY_2D;
 
+typedef ARRAY_1D VECTOR_1D;
 
 int* create1D(int size);
 int** create2D(int row,int col);
@@ -39,5 +40,6 @@ void dealloc_2d(ARRAY_2D* ptr);
 void add_array(ARRAY_1D *a1,ARRAY_1D *a2,ARRAY_1D* res);
 void sub_array(ARRAY_1D *a1,ARRAY_1D *a2,ARRAY_1D* res);
 void mul_array(ARRAY_1D *a1,ARRAY_1D *a2,ARRAY_1D* res);
+void vector_add(VECTOR_1D *v1,VECTOR_1D* v2,VECTOR_1D *res);
 
 #endif //DATA_STRUCTURES_DS_ARRAY_H

@@ -141,3 +141,15 @@ void mul_array(ARRAY_1D *a1,ARRAY_1D *a2,ARRAY_1D* res)
         res->_arr[i] = a1->_arr[i] * a2->_arr[i];
     }
 }
+
+void vector_add(VECTOR_1D *v1,VECTOR_1D* v2,VECTOR_1D *res)
+{
+    VERIFY_1D_SIZE(v1,v2);
+    int size = v1->size;
+
+    for(int i=0;i<size;i++)
+    {
+        res->_arr[i] = v1->_arr[i] + v2->_arr[i];
+    }
+
+}
